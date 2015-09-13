@@ -1,0 +1,71 @@
+﻿@model IEnumerable<ShoppingItem>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active intro-carousel">
+            @*<img src="~/images/Mustard.jpg" alt="Mustard" class="intro-carousel" @*class="img-responsive" />*@
+            <img src="~/images/ketchupIntro.jpg" alt="Ketchup" class="intro-carousel" @*class="img-responsive"*@ />
+            <div class="container">
+                <div class="carousel-caption">
+                    <p>
+                        Don't forget the sauce!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item intro-carousel">
+            <img src="~/images/SausageIntro.jpg" alt="Hamburger" class="intro-carousel">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <p>
+                        What would you do without some meat?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item intro-carousel">
+            <img src="~/images/Potatoes.jpg" alt="Potatoes" class="intro-carousel">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <p>
+                        Get some on the side!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item intro-carousel">
+            <img src="~/images/toothpickIntro.jpg" alt="toothpick" class="intro-carousel">
+            <div class="container">
+                <div class="carousel-caption">
+                    <p>
+                        Just get it out!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-9">
+        @foreach (var item in Model)
+        {
+            @await Html.PartialAsync("Partials/ShoppingItemSummary", item);
+        }
+    </div>
+    <div class="col-md-3">
+        @Component.Invoke("ShoppingCart")
+    </div>
+
+</div>

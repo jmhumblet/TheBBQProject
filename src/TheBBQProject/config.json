@@ -1,0 +1,11 @@
+{
+    "AppSettings": {
+        "SiteTitle": "TheBBQProject"
+    },
+    "MyConfiguration": {
+        "MyVar": 10,
+        "MyObject": {
+            "MyVar": 20
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net46": {
+      "wrappedProject": "../../TheBBQProject.Models/TheBBQProject.Models.csproj",
+      "bin": {
+        "assembly": "../../TheBBQProject.Models/obj/{configuration}/TheBBQProject.Models.dll",
+        "pdb": "../../TheBBQProject.Models/obj/{configuration}/TheBBQProject.Models.pdb"
+      }
+    }
+  }
+}

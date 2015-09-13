@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7D432F6A-FD4C-4DF7-9FE1-FA721E3B298D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C79F810B-A285-45B5-A684-BD8E5B7CD658}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TheBBQProject", "src\TheBBQProject\TheBBQProject.xproj", "{998FB054-5298-4867-B8EC-82239A6F1709}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{998FB054-5298-4867-B8EC-82239A6F1709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{998FB054-5298-4867-B8EC-82239A6F1709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{998FB054-5298-4867-B8EC-82239A6F1709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{998FB054-5298-4867-B8EC-82239A6F1709}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{998FB054-5298-4867-B8EC-82239A6F1709} = {7D432F6A-FD4C-4DF7-9FE1-FA721E3B298D}
+	EndGlobalSection
+EndGlobal

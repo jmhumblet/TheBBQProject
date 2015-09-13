@@ -1,0 +1,19 @@
+@model ShoppingItem
+@*
+@using (Html.BeginForm("New", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+*@
+<form asp-action="New" asp-controller="Home">
+	<div class="form-group">
+		<label asp-for="@Model.Name" class="col-md-2"></label>
+	
+		<div class="col-md-10">
+			@*
+			@Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+			@Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+			*@
+			<input asp-for="@Model.Name" class="form-control" />
+			<span asp-validation-for="@Model.Name" class="text-danger"></span>
+		</div>
+	</div>
+	<input type="submit" value="Go !" class="btn btn-default"/>
+</form>

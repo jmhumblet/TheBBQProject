@@ -1,0 +1,37 @@
+﻿@model ShoppingCart
+
+<div class="thumbnail">
+    <div class="content">
+        <h2>Your cart</h2>
+        <table class="table table-condensed table-hover">
+            @foreach (var item in Model.CartItems)
+        {
+                <tr>
+
+                    <td class="col-sm-1">
+                        <a asp-controller="ShoppingItem" asp-action="RemoveFromCart" asp-route-id="@item.ShoppingItem.Id">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                    <td class="col-sm-5">
+                        @item.ShoppingItem.Name
+                    </td>
+                    <td class="col-sm-2">
+                        @item.Quantity
+                    </td>
+                    <td class="col-sm-4">
+                        @(item.Quantity * item.ShoppingItem.Price) €
+                    </td>
+
+
+                </tr>
+            }
+        </table>
+        <h3>Total : @Model.Total €</h3>
+        <h4>Progress to reduction</h4>
+        @*<div bs-progress-min="0"
+            bs-progress-max="100"
+            bs-progress-value="Total">
+        </div>*@
+    </div>
+</div>
